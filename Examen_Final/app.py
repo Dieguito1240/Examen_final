@@ -2,12 +2,12 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Ruta principal
+
 @app.route('/')
 def menu():
     return render_template('index.html')
 
-# Ejercicio 1: Cálculo de compras
+
 @app.route('/ejercicio1', methods=['GET', 'POST'])
 def ejercicio1():
     if request.method == 'POST':
@@ -35,7 +35,7 @@ def ejercicio1():
                                total_final=total_final)
     return render_template('ejercicio1.html')
 
-# Ejercicio 2: Inicio de sesión
+
 @app.route('/ejercicio2', methods=['GET', 'POST'])
 def ejercicio2():
     mensaje = None
@@ -56,6 +56,6 @@ def ejercicio2():
 
     return render_template('ejercicio2.html', mensaje=mensaje)
 
-# Ejecutar la app
+
 if __name__ == '__main__':
     app.run(debug=True)
