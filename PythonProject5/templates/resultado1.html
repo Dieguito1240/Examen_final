@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado - Ejercicio 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <h1>Resultado del Cálculo</h1>
+
+    <p><strong>Nombre:</strong> {{ nombre }}</p>
+    <p><strong>Edad:</strong> {{ edad }}</p>
+    <p><strong>Cantidad de Tarros:</strong> {{ cantidad }}</p>
+    <p><strong>Total a Pagar:</strong> ${{ total }}</p>
+    <p><strong>Descuento Aplicado:</strong> {{ descuento_aplicado }}</p>
+
+    <br>
+    <a href="/">Volver al menú</a>
+</body>
+</html>
